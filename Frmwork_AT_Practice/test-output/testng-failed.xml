@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="generic.MyTestngListener"/>
+  </listeners>
+  <test thread-count="3" name="Test1(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="http://127.0.0.1/login.do"/>
+    <classes>
+      <class name="scripts.TaskTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="createCustomer"/>
+          <include name="deleteCustomer"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- scripts.TaskTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
